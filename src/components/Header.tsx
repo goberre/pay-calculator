@@ -8,7 +8,7 @@ export default function Header() {
           ₩
         </div>
         <h1 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
-          2026 시급/연봉 상호 변환기
+          시급·연봉 계산기
         </h1>
         <p className="mt-2 max-w-xl text-sm leading-relaxed text-gray-500 sm:text-base">
           {siteConfig.tagline}

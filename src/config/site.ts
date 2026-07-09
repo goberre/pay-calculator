@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "2026 시급/연봉 상호 변환 계산기",
+  name: "시급·연봉 계산기",
   tagline:
-    "시급을 월급·연봉으로, 연봉을 시급·실수령액으로 0.1초 만에 변환. 주휴수당 포함 여부를 선택해 맞춤 계산하세요.",
+    "시급 계산기와 연봉 계산기를 한곳에서. 월급, 연봉, 시급, 실수령액을 바로 확인하세요.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pay.brand.com",
   adsense: {
     clientId: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-XXXXXXXXXXXXXXXX",

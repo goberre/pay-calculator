@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run infographics && next build",
+    "infographics": "node scripts/generate-minimum-wage-infographic.mjs",
     "start": "next start",
     "lint": "eslint"
   },

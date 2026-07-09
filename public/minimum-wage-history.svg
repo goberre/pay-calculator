@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="2010년부터 2026년까지 최저시급 변화">
+  <rect width="960" height="540" rx="24" fill="#EFF6FF"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#3182F6"/>
+  <text x="480" y="88" text-anchor="middle" fill="#2563EB" font-family="system-ui,sans-serif" font-size="13" font-weight="600">INFOGRAPHIC</text>
+  <text x="480" y="118" text-anchor="middle" fill="#111827" font-family="system-ui,sans-serif" font-size="26" font-weight="700">2010~2026 최저시급 변화</text>
+  <text x="480" y="146" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="15">최저임금위원회·고용노동부 공식 시급</text>
+  <rect x="120" y="168" width="240" height="52" rx="12" fill="#F9FAFB"/>
+  <text x="240" y="190" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12">2010년</text>
+  <text x="240" y="212" text-anchor="middle" fill="#111827" font-family="system-ui,sans-serif" font-size="18" font-weight="700">4,110원</text>
+  <rect x="360" y="168" width="240" height="52" rx="12" fill="#DBEAFE"/>
+  <text x="480" y="190" text-anchor="middle" fill="#2563EB" font-family="system-ui,sans-serif" font-size="12">16년간 상승</text>
+  <text x="480" y="212" text-anchor="middle" fill="#1D4ED8" font-family="system-ui,sans-serif" font-size="18" font-weight="700">2.5배 · +151%</text>
+  <rect x="600" y="168" width="240" height="52" rx="12" fill="#EFF6FF"/>
+  <text x="720" y="190" text-anchor="middle" fill="#2563EB" font-family="system-ui,sans-serif" font-size="12">2026년</text>
+  <text x="720" y="212" text-anchor="middle" fill="#1D4ED8" font-family="system-ui,sans-serif" font-size="18" font-weight="700">10,320원</text>
+  <line x1="80" y1="420" x2="960" y2="420" stroke="#E5E7EB" stroke-width="1"/>
+
+  
+  <rect x="80" y="308.48837209302326" width="46.11764705882353" height="111.51162790697674" rx="4" fill="#9CA3AF"/>
+  <text x="103.05882352941177" y="302.48837209302326" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">4,110</text>
+  <text x="103.05882352941177" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">10</text>
+
+  
+  <rect x="132.11764705882354" y="302.7906976744186" width="46.11764705882353" height="117.2093023255814" rx="4" fill="#9CA3AF"/>
+  <text x="155.1764705882353" y="296.7906976744186" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">4,320</text>
+  <text x="155.1764705882353" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">11</text>
+
+  
+  <rect x="184.23529411764707" y="295.73643410852713" width="46.11764705882353" height="124.26356589147287" rx="4" fill="#9CA3AF"/>
+  <text x="207.29411764705884" y="289.73643410852713" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">4,580</text>
+  <text x="207.29411764705884" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">12</text>
+
+  
+  <rect x="236.35294117647058" y="288.1395348837209" width="46.11764705882353" height="131.86046511627907" rx="4" fill="#9CA3AF"/>
+  <text x="259.4117647058823" y="282.1395348837209" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">4,860</text>
+  <text x="259.4117647058823" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">13</text>
+
+  
+  <rect x="288.47058823529414" y="278.64341085271315" width="46.11764705882353" height="141.35658914728683" rx="4" fill="#9CA3AF"/>
+  <text x="311.5294117647059" y="272.64341085271315" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">5,210</text>
+  <text x="311.5294117647059" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">14</text>
+
+  
+  <rect x="340.5882352941176" y="268.6046511627907" width="46.11764705882353" height="151.3953488372093" rx="4" fill="#9CA3AF"/>
+  <text x="363.6470588235294" y="262.6046511627907" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">5,580</text>
+  <text x="363.6470588235294" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">15</text>
+
+  
+  <rect x="392.70588235294116" y="256.3953488372093" width="46.11764705882353" height="163.6046511627907" rx="4" fill="#9CA3AF"/>
+  <text x="415.7647058823529" y="250.39534883720933" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">6,030</text>
+  <text x="415.7647058823529" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">16</text>
+
+  
+  <rect x="444.8235294117647" y="244.45736434108528" width="46.11764705882353" height="175.54263565891472" rx="4" fill="#9CA3AF"/>
+  <text x="467.88235294117646" y="238.45736434108528" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">6,470</text>
+  <text x="467.88235294117646" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">17</text>
+
+  <text x="520" y="193.69767441860466" text-anchor="middle" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="11" font-weight="700">+16.38%</text>
+  <rect x="496.94117647058823" y="215.69767441860466" width="46.11764705882353" height="204.30232558139534" rx="4" fill="#7C3AED"/>
+  <text x="520" y="209.69767441860466" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">7,530</text>
+  <text x="520" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">18</text>
+
+  <text x="572.1176470588234" y="171.4496124031008" text-anchor="middle" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="11" font-weight="700">+10.89%</text>
+  <rect x="549.0588235294117" y="193.4496124031008" width="46.11764705882353" height="226.5503875968992" rx="4" fill="#7C3AED"/>
+  <text x="572.1176470588234" y="187.4496124031008" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">8,350</text>
+  <text x="572.1176470588234" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">19</text>
+
+  
+  <rect x="601.1764705882352" y="186.93798449612402" width="46.11764705882353" height="233.06201550387598" rx="4" fill="#60A5FA"/>
+  <text x="624.235294117647" y="180.93798449612402" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">8,590</text>
+  <text x="624.235294117647" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">20</text>
+
+  
+  <rect x="653.2941176470588" y="183.41085271317831" width="46.11764705882353" height="236.58914728682169" rx="4" fill="#60A5FA"/>
+  <text x="676.3529411764705" y="177.41085271317831" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">8,720</text>
+  <text x="676.3529411764705" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">21</text>
+
+  
+  <rect x="705.4117647058823" y="171.47286821705427" width="46.11764705882353" height="248.52713178294573" rx="4" fill="#60A5FA"/>
+  <text x="728.470588235294" y="165.47286821705427" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">9,160</text>
+  <text x="728.470588235294" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">22</text>
+
+  
+  <rect x="757.5294117647059" y="158.9922480620155" width="46.11764705882353" height="261.0077519379845" rx="4" fill="#60A5FA"/>
+  <text x="780.5882352941176" y="152.9922480620155" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">9,620</text>
+  <text x="780.5882352941176" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">23</text>
+
+  
+  <rect x="809.6470588235294" y="152.48062015503876" width="46.11764705882353" height="267.51937984496124" rx="4" fill="#60A5FA"/>
+  <text x="832.7058823529411" y="146.48062015503876" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">9,860</text>
+  <text x="832.7058823529411" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">24</text>
+
+  
+  <rect x="861.7647058823529" y="147.8682170542636" width="46.11764705882353" height="272.1317829457364" rx="4" fill="#60A5FA"/>
+  <text x="884.8235294117646" y="141.8682170542636" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">10,030</text>
+  <text x="884.8235294117646" y="440" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="12" font-weight="500">25</text>
+
+  <text x="936.9411764705882" y="118" text-anchor="middle" fill="#2563EB" font-family="system-ui,sans-serif" font-size="11" font-weight="700">현재</text>
+  <rect x="913.8823529411765" y="140" width="46.11764705882353" height="280" rx="4" fill="#2563EB"/>
+  <text x="936.9411764705882" y="134" text-anchor="middle" fill="#374151" font-family="system-ui,sans-serif" font-size="10" font-weight="600">10,320</text>
+  <text x="936.9411764705882" y="440" text-anchor="middle" fill="#2563EB" font-family="system-ui,sans-serif" font-size="12" font-weight="700">26</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="14">pay.brand.com · 2018·2019 10%↑ 급등 구간 보라색</text>
+</svg>

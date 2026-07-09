@@ -3,6 +3,12 @@
 import { useMemo, useState } from "react";
 import AdSpace from "@/components/AdSpace";
 import Header from "@/components/Header";
+import PayBreakdownChart from "@/components/PayBreakdownChart";
+import {
+  ANNUAL_PRESETS,
+  HOURLY_PRESETS,
+  MIN_HOURLY_WAGE_2026,
+} from "@/config/seo";
 import { siteConfig } from "@/config/site";
 import {
   buildCopyText,
@@ -16,10 +22,24 @@ import {
   type PayResult,
 } from "@/lib/payCalculator";
 
-const MODES: { id: CalcMode; label: string }[] = [
-  { id: "hourly", label: "시급을 월급으로" },
-  { id: "annual", label: "연봉을 시급으로" },
+const MODES: {
+  id: CalcMode;
+  label: string;
+  hint: string;
+}[] = [
+  {
+    id: "hourly",
+    label: "시급 계산기",
+    hint: "시급 → 월급 · 연봉 · 실수령",
+  },
+  {
+    id: "annual",
+    label: "연봉 계산기",
+    hint: "연봉 → 시급 · 월급 · 실수령",
+  },
 ];
+
+const ANNUAL_EXAMPLE = 40_000_000;
 
 export default function PayCalculatorClient() {
   const [mode, setMode] = useState<CalcMode>("hourly");
@@ -63,6 +83,32 @@ export default function PayCalculatorClient() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const exampleResult = useMemo(
+    () =>
+      calcFromHourly({
+        hourlyWage: MIN_HOURLY_WAGE_2026,
+        hoursPerDay: 8,
+        daysPerWeek: 5,
+        includeWeeklyHoliday: true,
+      }),
+    [],
+  );
+
+  const annualExampleResult = useMemo(
+    () => calcFromAnnual({ annualSalary: ANNUAL_EXAMPLE }),
+    [],
+  );
+
+  const activeMode = MODES.find((tab) => tab.id === mode)!;
+
+  const applyHourlyPreset = (value: number) => {
+    setHourlyInput(formatInputValue(String(value)));
+  };
+
+  const applyAnnualPreset = (value: number) => {
+    setAnnualInput(formatInputValue(String(value)));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
       <Header />
@@ -72,23 +118,36 @@ export default function PayCalculatorClient() {
 
         <section className="rounded-3xl border border-gray-200/80 bg-white p-6 shadow-sm sm:p-8">
           <div className="mb-8">
-            <p className="mb-3 text-sm font-medium text-gray-600">변환 모드</p>
             <div className="flex flex-col gap-2 rounded-2xl bg-gray-100 p-1.5 sm:flex-row">
               {MODES.map((tab) => (
                 <button
                   key={tab.id}
                   type="button"
                   onClick={() => setMode(tab.id)}
-                  className={`flex-1 rounded-xl px-4 py-3 text-sm font-medium transition-all ${
+                  className={`flex-1 rounded-xl px-4 py-3 text-left transition-all ${
                     mode === tab.id
-                      ? "bg-white text-gray-900 shadow-sm"
+                      ? "bg-white text-gray-900 shadow-sm ring-1 ring-blue-100"
                       : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
-                  {tab.label}
+                  <span className="block text-sm font-semibold">{tab.label}</span>
+                  <span
+                    className={`mt-0.5 block text-xs ${
+                      mode === tab.id ? "text-blue-600" : "text-gray-400"
+                    }`}
+                  >
+                    {tab.hint}
+                  </span>
                 </button>
               ))}
             </div>
+          </div>
+
+          <div className="mb-6">
+            <h2 className="text-base font-semibold text-gray-900">
+              {activeMode.label}
+            </h2>
+            <p className="mt-1 text-sm text-gray-500">{activeMode.hint}</p>
           </div>
 
           {mode === "hourly" ? (
@@ -102,9 +161,21 @@ export default function PayCalculatorClient() {
                   inputMode="numeric"
                   value={hourlyInput}
                   onChange={(e) => setHourlyInput(formatInputValue(e.target.value))}
-                  placeholder="10,030"
+                  placeholder="10,320"
                   className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-4 text-2xl font-semibold tracking-tight text-gray-900 outline-none transition focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-100"
                 />
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {HOURLY_PRESETS.map((preset) => (
+                    <button
+                      key={preset.label}
+                      type="button"
+                      onClick={() => applyHourlyPreset(preset.value)}
+                      className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                    >
+                      {preset.label}
+                    </button>
+                  ))}
+                </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
@@ -159,6 +230,18 @@ export default function PayCalculatorClient() {
                 placeholder="50,000,000"
                 className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-4 text-2xl font-semibold tracking-tight text-gray-900 outline-none transition focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-100"
               />
+              <div className="mt-3 flex flex-wrap gap-2">
+                {ANNUAL_PRESETS.map((preset) => (
+                  <button
+                    key={preset.label}
+                    type="button"
+                    onClick={() => applyAnnualPreset(preset.value)}
+                    className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                  >
+                    {preset.label}
+                  </button>
+                ))}
+              </div>
               <p className="mt-2 text-xs text-gray-400">
                 월 209시간(주 40h + 주휴 8h) 기준으로 시급을 역산합니다.
               </p>
@@ -166,44 +249,155 @@ export default function PayCalculatorClient() {
           )}
         </section>
 
+        <AdSpace type="adsense" />
+
         <AdSpace
           type="coupang"
           productKeyword="사무용 모니터 받침대"
         />
 
+        {!result && mode === "hourly" && (
+          <section className="rounded-3xl border border-dashed border-gray-200 bg-white/80 p-6 sm:p-8">
+            <p className="mb-1 text-center text-sm font-medium text-gray-500">
+              시급 계산기 예시 · 2026 최저시급
+            </p>
+            <p className="mb-6 text-center text-xs text-gray-400">
+              시급 {formatWon(MIN_HOURLY_WAGE_2026)} · 주 40시간 · 주휴수당 포함
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl bg-gray-50 p-4 text-center">
+                <p className="text-xs text-gray-500">예상 월급 (세전)</p>
+                <p className="mt-1 text-lg font-bold text-gray-900">
+                  {formatWon(exampleResult.monthlyGross)}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-gray-50 p-4 text-center">
+                <p className="text-xs text-gray-500">예상 연봉 (세전)</p>
+                <p className="mt-1 text-lg font-bold text-gray-900">
+                  {formatWon(exampleResult.annualGross)}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-emerald-50 p-4 text-center">
+                <p className="text-xs text-emerald-600">예상 실수령 (간이)</p>
+                <p className="mt-1 text-lg font-bold text-emerald-900">
+                  {formatWon(exampleResult.monthlyNetEstimate)}
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => applyHourlyPreset(MIN_HOURLY_WAGE_2026)}
+              className="mt-5 w-full rounded-2xl border border-blue-200 bg-blue-50 py-3 text-sm font-medium text-blue-700 transition hover:bg-blue-100"
+            >
+              이 조건으로 계산하기
+            </button>
+          </section>
+        )}
+
+        {!result && mode === "annual" && (
+          <section className="rounded-3xl border border-dashed border-gray-200 bg-white/80 p-6 sm:p-8">
+            <p className="mb-1 text-center text-sm font-medium text-gray-500">
+              연봉 계산기 예시 · 연봉 4,000만원
+            </p>
+            <p className="mb-6 text-center text-xs text-gray-400">
+              월 209시간 기준 역산
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl bg-blue-50 p-4 text-center">
+                <p className="text-xs text-blue-600">환산 시급</p>
+                <p className="mt-1 text-lg font-bold text-blue-900">
+                  {formatWon(annualExampleResult.hourlyWage)}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-gray-50 p-4 text-center">
+                <p className="text-xs text-gray-500">예상 월급 (세전)</p>
+                <p className="mt-1 text-lg font-bold text-gray-900">
+                  {formatWon(annualExampleResult.monthlyGross)}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-emerald-50 p-4 text-center">
+                <p className="text-xs text-emerald-600">예상 실수령 (간이)</p>
+                <p className="mt-1 text-lg font-bold text-emerald-900">
+                  {formatWon(annualExampleResult.monthlyNetEstimate)}
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => applyAnnualPreset(ANNUAL_EXAMPLE)}
+              className="mt-5 w-full rounded-2xl border border-blue-200 bg-blue-50 py-3 text-sm font-medium text-blue-700 transition hover:bg-blue-100"
+            >
+              연봉 4,000만원으로 계산하기
+            </button>
+          </section>
+        )}
+
         {result && (
           <section className="rounded-3xl border border-gray-200/80 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="mb-6 text-center text-sm font-medium text-gray-500">
-              계산 결과
+              {activeMode.label} 결과
             </h2>
 
             <div className="mb-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl bg-blue-50 p-5 text-center">
-                <p className="text-xs font-medium text-blue-600">환산 시급</p>
-                <p className="mt-2 text-2xl font-bold text-blue-900 sm:text-3xl">
-                  {formatWon(result.hourlyWage)}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-gray-50 p-5 text-center">
-                <p className="text-xs font-medium text-gray-500">예상 월급 (세전)</p>
-                <p className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
-                  {formatWon(result.monthlyGross)}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-gray-50 p-5 text-center">
-                <p className="text-xs font-medium text-gray-500">예상 연봉 (세전)</p>
-                <p className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
-                  {formatWon(result.annualGross)}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-emerald-50 p-5 text-center">
-                <p className="text-xs font-medium text-emerald-600">
-                  예상 월 실수령 (간이)
-                </p>
-                <p className="mt-2 text-2xl font-bold text-emerald-900 sm:text-3xl">
-                  {formatWon(result.monthlyNetEstimate)}
-                </p>
-              </div>
+              {mode === "annual" ? (
+                <>
+                  <div className="rounded-2xl bg-blue-50 p-5 text-center ring-2 ring-blue-200">
+                    <p className="text-xs font-medium text-blue-600">환산 시급</p>
+                    <p className="mt-2 text-2xl font-bold text-blue-900 sm:text-3xl">
+                      {formatWon(result.hourlyWage)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-gray-50 p-5 text-center ring-2 ring-gray-200">
+                    <p className="text-xs font-medium text-gray-500">예상 월급 (세전)</p>
+                    <p className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+                      {formatWon(result.monthlyGross)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-gray-50 p-5 text-center">
+                    <p className="text-xs font-medium text-gray-500">입력 연봉 (세전)</p>
+                    <p className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+                      {formatWon(result.annualGross)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-emerald-50 p-5 text-center ring-2 ring-emerald-200">
+                    <p className="text-xs font-medium text-emerald-600">
+                      예상 월 실수령 (간이)
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-emerald-900 sm:text-3xl">
+                      {formatWon(result.monthlyNetEstimate)}
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="rounded-2xl bg-gray-50 p-5 text-center">
+                    <p className="text-xs font-medium text-gray-500">입력 시급</p>
+                    <p className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+                      {formatWon(result.hourlyWage)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-blue-50 p-5 text-center ring-2 ring-blue-200">
+                    <p className="text-xs font-medium text-blue-600">예상 월급 (세전)</p>
+                    <p className="mt-2 text-2xl font-bold text-blue-900 sm:text-3xl">
+                      {formatWon(result.monthlyGross)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-blue-50 p-5 text-center ring-2 ring-blue-200">
+                    <p className="text-xs font-medium text-blue-600">예상 연봉 (세전)</p>
+                    <p className="mt-2 text-2xl font-bold text-blue-900 sm:text-3xl">
+                      {formatWon(result.annualGross)}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-emerald-50 p-5 text-center ring-2 ring-emerald-200">
+                    <p className="text-xs font-medium text-emerald-600">
+                      예상 월 실수령 (간이)
+                    </p>
+                    <p className="mt-2 text-2xl font-bold text-emerald-900 sm:text-3xl">
+                      {formatWon(result.monthlyNetEstimate)}
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-gray-100">
@@ -238,6 +432,8 @@ export default function PayCalculatorClient() {
                 </tbody>
               </table>
             </div>
+
+            <PayBreakdownChart result={result} />
 
             <button
               type="button"
