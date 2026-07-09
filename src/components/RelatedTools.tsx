@@ -2,19 +2,19 @@ import Link from "next/link";
 
 const TOOLS = [
   {
-    href: "https://tax.brand.com",
+    href: "https://tax.ehfrhfo.com",
     name: "종합소득세·4대보험 계산기",
     desc: "세후 실수령액 정밀 계산",
     emoji: "🧾",
   },
   {
-    href: "https://tax.brand.com/freelancer",
+    href: "https://tax.ehfrhfo.com/freelancer",
     name: "프리랜서 3.3% 계산기",
     desc: "외주·부업 원천징수",
     emoji: "💼",
   },
   {
-    href: "https://tax.brand.com/employee",
+    href: "https://tax.ehfrhfo.com/employee",
     name: "직장인 연봉 계산기",
     desc: "4대보험·연말정산 추정",
     emoji: "🏢",

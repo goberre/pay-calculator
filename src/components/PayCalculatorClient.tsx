@@ -447,8 +447,8 @@ export default function PayCalculatorClient() {
               주휴수당: (주 근무시간 ÷ 40) × 8 × 시급 · 월 환산 시 주
               {WEEKS_PER_MONTH.toFixed(2)}배 적용. 4대보험·세금은 간이 추정치입니다.
               정확한 세후 금액은{" "}
-              <a href="https://tax.brand.com" className="text-blue-600 hover:underline">
-                tax.brand.com
+              <a href="https://tax.ehfrhfo.com" className="text-blue-600 hover:underline">
+                tax.ehfrhfo.com
               </a>{" "}
               계산기를 이용하세요.
             </p>

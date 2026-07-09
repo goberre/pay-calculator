@@ -74,7 +74,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" vi
   <text x="720" y="212" text-anchor="middle" fill="#1D4ED8" font-family="system-ui,sans-serif" font-size="18" font-weight="700">10,320원</text>
   <line x1="${chartLeft}" y1="${chartBottom}" x2="${chartLeft + chartWidth}" y2="${chartBottom}" stroke="#E5E7EB" stroke-width="1"/>
 ${bars}
-  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="14">pay.brand.com · 2018·2019 10%↑ 급등 구간 보라색</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="14">pay.ehfrhfo.com · 2018·2019 10%↑ 급등 구간 보라색</text>
 </svg>`;
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
