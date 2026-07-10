@@ -19,6 +19,20 @@ const TOOLS = [
     desc: "4대보험·연말정산 추정",
     emoji: "🏢",
   },
+  {
+    href: "/hourly",
+    name: "시급 계산기",
+    desc: "시급 → 월급·연봉",
+    emoji: "⏱️",
+    internal: true,
+  },
+  {
+    href: "/blog",
+    name: "시급·연봉 가이드",
+    desc: "주휴수당·최저임금 정보",
+    emoji: "📘",
+    internal: true,
+  },
 ] as const;
 
 export default function RelatedTools() {
@@ -34,11 +48,12 @@ export default function RelatedTools() {
         <p className="mb-6 text-sm text-gray-500">
           시급·연봉 변환 후, 정확한 세후 금액은 세금 계산기에서 확인하세요.
         </p>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {TOOLS.map((tool) => (
             <Link
               key={tool.href}
               href={tool.href}
+              {...(!("internal" in tool) ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="rounded-2xl border border-gray-200/80 bg-gray-50 p-4 transition hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-sm"
             >
               <span className="text-2xl">{tool.emoji}</span>

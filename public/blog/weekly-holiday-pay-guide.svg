@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" rx="24" fill="#ECFDF5"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#059669"/>
+  <text x="480" y="92" text-anchor="middle" fill="#059669" font-family="system-ui,sans-serif" font-size="24" font-weight="700">주휴수당 계산 공식</text>
+
+  <rect x="64" y="120" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#D1FAE5"/>
+  <text x="96" y="156" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">조건</text>
+  <text x="864" y="156" text-anchor="end" fill="#059669" font-family="system-ui,sans-serif" font-size="24" font-weight="700">주 15시간+ · 개근</text>
+  <rect x="64" y="178" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#D1FAE5"/>
+  <text x="96" y="214" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">공식</text>
+  <text x="864" y="214" text-anchor="end" fill="#059669" font-family="system-ui,sans-serif" font-size="20" font-weight="600">(주근무÷40)×8×시급</text>
+  <rect x="64" y="236" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#D1FAE5"/>
+  <text x="96" y="272" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">예: 주 20h</text>
+  <text x="864" y="272" text-anchor="end" fill="#059669" font-family="system-ui,sans-serif" font-size="20" font-weight="600">시급1만 → 주휴 4만</text>
+  <rect x="64" y="294" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#D1FAE5"/>
+  <text x="96" y="330" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월 환산</text>
+  <text x="864" y="330" text-anchor="end" fill="#047857" font-family="system-ui,sans-serif" font-size="20" font-weight="600">× 4.345주</text>
+  <rect x="64" y="352" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#D1FAE5"/>
+  <text x="96" y="388" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">미지급 시</text>
+  <text x="864" y="388" text-anchor="end" fill="#065F46" font-family="system-ui,sans-serif" font-size="24" font-weight="700">임금체불 신고 가능</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="16">pay.ehfrhfo.com · 2026</text>
+</svg>

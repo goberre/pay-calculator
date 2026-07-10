@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" rx="24" fill="#F5F3FF"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#7C3AED"/>
+  <text x="480" y="92" text-anchor="middle" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="24" font-weight="700">알바 시급 vs 실수령</text>
+
+  <text x="240" y="130" text-anchor="middle" fill="#7C3AED" font-size="20" font-weight="700">3.3% 원천</text>
+  <text x="720" y="130" text-anchor="middle" fill="#3182F6" font-size="20" font-weight="700">4대보험</text>
+  <rect x="64" y="148" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EEF2FF"/>
+  <text x="96" y="184" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월 200만 기준</text>
+  <text x="864" y="184" text-anchor="end" fill="#6366F1" font-family="system-ui,sans-serif" font-size="20" font-weight="600">193만  |  170~180만</text>
+  <rect x="64" y="206" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EEF2FF"/>
+  <text x="96" y="242" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">적용</text>
+  <text x="864" y="242" text-anchor="end" fill="#6366F1" font-family="system-ui,sans-serif" font-size="20" font-weight="600">외주·용역  |  근로계약</text>
+  <rect x="64" y="264" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EEF2FF"/>
+  <text x="96" y="300" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">확인</text>
+  <text x="864" y="300" text-anchor="end" fill="#6366F1" font-family="system-ui,sans-serif" font-size="24" font-weight="700">계약서·지급명</text>
+  <rect x="64" y="322" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EEF2FF"/>
+  <text x="96" y="358" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">정밀 계산</text>
+  <text x="864" y="358" text-anchor="end" fill="#4338CA" font-family="system-ui,sans-serif" font-size="20" font-weight="600">tax.ehfrhfo.com</text>
+  <rect x="64" y="380" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EEF2FF"/>
+  <text x="96" y="416" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">시급 환산</text>
+  <text x="864" y="416" text-anchor="end" fill="#4338CA" font-family="system-ui,sans-serif" font-size="20" font-weight="600">pay.ehfrhfo.com</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="16">pay.ehfrhfo.com · 2026</text>
+</svg>

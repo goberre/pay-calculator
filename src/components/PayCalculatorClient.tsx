@@ -41,12 +41,36 @@ const MODES: {
 
 const ANNUAL_EXAMPLE = 40_000_000;
 
-export default function PayCalculatorClient() {
-  const [mode, setMode] = useState<CalcMode>("hourly");
-  const [hourlyInput, setHourlyInput] = useState("");
-  const [hoursPerDay, setHoursPerDay] = useState("8");
-  const [daysPerWeek, setDaysPerWeek] = useState("5");
-  const [includeWeeklyHoliday, setIncludeWeeklyHoliday] = useState(true);
+type PayCalculatorClientProps = {
+  defaultMode?: CalcMode;
+  headline?: string;
+  tagline?: string;
+  badge?: string;
+  initialHourly?: number;
+  initialDaysPerWeek?: string;
+  initialHoursPerDay?: string;
+  initialIncludeWeeklyHoliday?: boolean;
+};
+
+export default function PayCalculatorClient({
+  defaultMode = "hourly",
+  headline,
+  tagline,
+  badge,
+  initialHourly,
+  initialDaysPerWeek,
+  initialHoursPerDay,
+  initialIncludeWeeklyHoliday,
+}: PayCalculatorClientProps = {}) {
+  const [mode, setMode] = useState<CalcMode>(defaultMode);
+  const [hourlyInput, setHourlyInput] = useState(
+    initialHourly ? formatInputValue(String(initialHourly)) : "",
+  );
+  const [hoursPerDay, setHoursPerDay] = useState(initialHoursPerDay ?? "8");
+  const [daysPerWeek, setDaysPerWeek] = useState(initialDaysPerWeek ?? "5");
+  const [includeWeeklyHoliday, setIncludeWeeklyHoliday] = useState(
+    initialIncludeWeeklyHoliday ?? true,
+  );
   const [annualInput, setAnnualInput] = useState("");
   const [copied, setCopied] = useState(false);
 
@@ -111,7 +135,7 @@ export default function PayCalculatorClient() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
-      <Header />
+      <Header headline={headline} tagline={tagline} badge={badge} />
 
       <main className="mx-auto max-w-4xl px-4 py-6">
         <AdSpace type="adsense" />
@@ -456,8 +480,30 @@ export default function PayCalculatorClient() {
         )}
       </main>
 
-      <footer className="mx-auto max-w-4xl px-4 py-10 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+      <footer className="mx-auto max-w-4xl px-4 py-10 text-center">
+        <nav className="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs">
+          <a href="/" className="text-gray-500 hover:text-gray-700">
+            홈
+          </a>
+          <a href="/hourly" className="text-gray-500 hover:text-gray-700">
+            시급 계산기
+          </a>
+          <a href="/annual" className="text-gray-500 hover:text-gray-700">
+            연봉 계산기
+          </a>
+          <a href="/minimum-wage" className="text-gray-500 hover:text-gray-700">
+            최저시급
+          </a>
+          <a href="/part-time" className="text-gray-500 hover:text-gray-700">
+            알바 계산기
+          </a>
+          <a href="/blog" className="text-gray-500 hover:text-gray-700">
+            시급·연봉 가이드
+          </a>
+        </nav>
+        <p className="text-xs text-gray-400">
+          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+        </p>
       </footer>
     </div>
   );

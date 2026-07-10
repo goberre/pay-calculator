@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" rx="24" fill="#FFFBEB"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#D97706"/>
+  <text x="480" y="92" text-anchor="middle" fill="#D97706" font-family="system-ui,sans-serif" font-size="24" font-weight="700">2026 최저시급 10,320원 환산</text>
+
+  <rect x="64" y="120" width="832" height="52" rx="12" fill="#D97706"/>
+  <text x="480" y="154" text-anchor="middle" fill="#FFF" font-family="system-ui,sans-serif" font-size="22" font-weight="700">시급 10,320원 · 주 40h · 주휴 포함</text>
+  <rect x="64" y="188" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#FEF3C7"/>
+  <text x="96" y="224" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월급 (세전)</text>
+  <text x="864" y="224" text-anchor="end" fill="#D97706" font-family="system-ui,sans-serif" font-size="24" font-weight="700">약 215만원</text>
+  <rect x="64" y="246" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#FEF3C7"/>
+  <text x="96" y="282" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">연봉 (세전)</text>
+  <text x="864" y="282" text-anchor="end" fill="#D97706" font-family="system-ui,sans-serif" font-size="20" font-weight="600">약 2,580만원</text>
+  <rect x="64" y="304" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#FEF3C7"/>
+  <text x="96" y="340" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">실수령 (간이)</text>
+  <text x="864" y="340" text-anchor="end" fill="#B45309" font-family="system-ui,sans-serif" font-size="20" font-weight="600">약 190~200만</text>
+  <rect x="64" y="362" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#FEF3C7"/>
+  <text x="96" y="398" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">위반 기준</text>
+  <text x="864" y="398" text-anchor="end" fill="#92400E" font-family="system-ui,sans-serif" font-size="24" font-weight="700">10,320원 미만</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="16">pay.ehfrhfo.com · 2026</text>
+</svg>

@@ -1,7 +1,25 @@
 import { buildJsonLdGraph } from "@/lib/jsonLd";
 
-export default function JsonLd() {
-  const graph = buildJsonLdGraph();
+type JsonLdProps = {
+  path?: string;
+  breadcrumbName?: string;
+  pageTitle?: string;
+  pageDescription?: string;
+};
+
+export default function JsonLd({
+  path,
+  breadcrumbName,
+  pageTitle,
+  pageDescription,
+}: JsonLdProps = {}) {
+  const graph = buildJsonLdGraph({
+    path,
+    breadcrumbName,
+    pageTitle,
+    pageDescription,
+  });
+
   return (
     <script
       type="application/ld+json"

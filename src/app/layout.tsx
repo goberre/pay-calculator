@@ -36,6 +36,21 @@ export const metadata: Metadata = {
     description: seoConfig.description,
     images: [seoConfig.ogImage],
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+  process.env.NAVER_SITE_VERIFICATION
+    ? {
+        verification: {
+          ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+            google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+          }),
+          ...(process.env.NAVER_SITE_VERIFICATION && {
+            other: {
+              "naver-site-verification": process.env.NAVER_SITE_VERIFICATION,
+            },
+          }),
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({

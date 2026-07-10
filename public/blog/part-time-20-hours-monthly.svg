@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" rx="24" fill="#F5F3FF"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#7C3AED"/>
+  <text x="480" y="92" text-anchor="middle" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="24" font-weight="700">주 20시간 알바 월급</text>
+
+  <rect x="64" y="120" width="832" height="52" rx="12" fill="#7C3AED"/>
+  <text x="480" y="154" text-anchor="middle" fill="#FFF" font-family="system-ui,sans-serif" font-size="22" font-weight="700">시급 10,320 · 주 5일 × 4h</text>
+  <rect x="64" y="188" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EDE9FE"/>
+  <text x="96" y="224" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">주 근무</text>
+  <text x="864" y="224" text-anchor="end" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="20" font-weight="600">20시간</text>
+  <rect x="64" y="246" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EDE9FE"/>
+  <text x="96" y="282" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">주휴수당</text>
+  <text x="864" y="282" text-anchor="end" fill="#7C3AED" font-family="system-ui,sans-serif" font-size="24" font-weight="700">약 4.1만/주</text>
+  <rect x="64" y="304" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EDE9FE"/>
+  <text x="96" y="340" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월급 (세전)</text>
+  <text x="864" y="340" text-anchor="end" fill="#6D28D9" font-family="system-ui,sans-serif" font-size="24" font-weight="700">약 108만원</text>
+  <rect x="64" y="362" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#EDE9FE"/>
+  <text x="96" y="398" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">연봉 환산</text>
+  <text x="864" y="398" text-anchor="end" fill="#5B21B6" font-family="system-ui,sans-serif" font-size="20" font-weight="600">약 1,300만원</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="16">pay.ehfrhfo.com · 2026</text>
+</svg>

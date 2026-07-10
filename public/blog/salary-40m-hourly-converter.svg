@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" rx="24" fill="#EEF2FF"/>
+  <rect x="32" y="32" width="896" height="476" rx="20" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="48" y="48" width="864" height="4" rx="2" fill="#4F46E5"/>
+  <text x="480" y="92" text-anchor="middle" fill="#4F46E5" font-family="system-ui,sans-serif" font-size="24" font-weight="700">연봉 4,000만원 → 시급</text>
+
+  <rect x="64" y="120" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#E0E7FF"/>
+  <text x="96" y="156" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">연봉</text>
+  <text x="864" y="156" text-anchor="end" fill="#4F46E5" font-family="system-ui,sans-serif" font-size="24" font-weight="700">4,000만원</text>
+  <rect x="64" y="178" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#E0E7FF"/>
+  <text x="96" y="214" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월급 (세전)</text>
+  <text x="864" y="214" text-anchor="end" fill="#4F46E5" font-family="system-ui,sans-serif" font-size="20" font-weight="600">약 333만원</text>
+  <rect x="64" y="236" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#E0E7FF"/>
+  <text x="96" y="272" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">환산 시급</text>
+  <text x="864" y="272" text-anchor="end" fill="#4F46E5" font-family="system-ui,sans-serif" font-size="24" font-weight="700">약 15,900원</text>
+  <rect x="64" y="294" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#E0E7FF"/>
+  <text x="96" y="330" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">기준</text>
+  <text x="864" y="330" text-anchor="end" fill="#4338CA" font-family="system-ui,sans-serif" font-size="20" font-weight="600">월 209시간</text>
+  <rect x="64" y="352" width="832" height="56" rx="12" fill="#FFFFFF" stroke="#E0E7FF"/>
+  <text x="96" y="388" fill="#374151" font-family="system-ui,sans-serif" font-size="20" font-weight="600">실수령 (간이)</text>
+  <text x="864" y="388" text-anchor="end" fill="#3730A3" font-family="system-ui,sans-serif" font-size="20" font-weight="600">약 280~290만</text>
+  <text x="480" y="510" text-anchor="middle" fill="#9CA3AF" font-family="system-ui,sans-serif" font-size="16">pay.ehfrhfo.com · 2026</text>
+</svg>

@@ -4,15 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run infographics && next build",
+    "build": "npm run infographics && npm run blog:infographics && next build",
     "infographics": "node scripts/generate-minimum-wage-infographic.mjs",
+    "blog:infographics": "node scripts/generate-blog-infographics.mjs",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "16.2.10",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
