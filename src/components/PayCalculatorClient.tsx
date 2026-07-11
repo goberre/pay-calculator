@@ -500,6 +500,9 @@ export default function PayCalculatorClient({
           <a href="/blog" className="text-gray-500 hover:text-gray-700">
             시급·연봉 가이드
           </a>
+          <a href="/privacy" className="text-gray-500 hover:text-gray-700">
+            개인정보처리방침
+          </a>
         </nav>
         <p className="text-xs text-gray-400">
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.

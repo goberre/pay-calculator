@@ -32,41 +32,46 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
     });
   }
 
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "WebSite",
+      "@id": `${url}/#website`,
+      url,
+      name: seoConfig.siteName,
+      description: seoConfig.description,
+      inLanguage: "ko-KR",
+    },
+    {
+      "@type": "WebApplication",
+      "@id": `${pageUrl}#app`,
+      name: pageName,
+      url: pageUrl,
+      description: pageDescription,
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Any",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+      inLanguage: "ko-KR",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems,
+    },
+  ];
+
+  if (!options.path) {
+    graph.splice(2, 0, {
+      "@type": "FAQPage",
+      "@id": `${url}/#faq`,
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    });
+  }
+
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": `${url}/#website`,
-        url,
-        name: seoConfig.siteName,
-        description: seoConfig.description,
-        inLanguage: "ko-KR",
-      },
-      {
-        "@type": "WebApplication",
-        "@id": `${pageUrl}#app`,
-        name: pageName,
-        url: pageUrl,
-        description: pageDescription,
-        applicationCategory: "FinanceApplication",
-        operatingSystem: "Any",
-        offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
-        inLanguage: "ko-KR",
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${url}/#faq`,
-        mainEntity: faqItems.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: { "@type": "Answer", text: item.answer },
-        })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: breadcrumbItems,
-      },
-    ],
+    "@graph": graph,
   };
 }
