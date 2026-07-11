@@ -503,6 +503,12 @@ export default function PayCalculatorClient({
           <a href="/privacy" className="text-gray-500 hover:text-gray-700">
             개인정보처리방침
           </a>
+          <a
+            href="https://ehfrhfo.com"
+            className="text-gray-500 hover:text-gray-700"
+          >
+            돌고래 홈
+          </a>
         </nav>
         <p className="text-xs text-gray-400">
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
