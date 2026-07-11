@@ -44,17 +44,3 @@ body {
 .scroll-hint-chevron-delay {
   animation-delay: 0.2s;
 }
-
-@keyframes dolphin-bob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.dolphin-logo-wrap {
-  animation: dolphin-bob 2.8s ease-in-out infinite;
-}
