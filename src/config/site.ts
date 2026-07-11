@@ -1,4 +1,5 @@
 export const siteConfig = {
+  brand: "돌고래",
   name: "시급·연봉 계산기",
   tagline:
     "시급 계산기와 연봉 계산기를 한곳에서. 월급, 연봉, 시급, 실수령액을 바로 확인하세요.",
