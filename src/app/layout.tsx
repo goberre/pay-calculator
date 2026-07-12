@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { brandUrls } from "@/config/brand";
 import { seoConfig } from "@/config/seo";
 import { isAdsenseConfigured, siteConfig } from "@/config/site";
 import "./globals.css";
@@ -19,7 +20,16 @@ export const metadata: Metadata = {
   },
   description: seoConfig.description,
   keywords: [...seoConfig.keywords],
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: { canonical: "/", languages: { "ko-KR": "/" } },
   openGraph: {
     type: "website",
@@ -60,6 +70,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="home" href={brandUrls.hub} />
         {isAdsenseConfigured() && (
           <script
             async

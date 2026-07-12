@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run infographics && npm run blog:infographics && next build",
+    "build": "node scripts/generate-sitemap.mjs && npm run infographics && npm run blog:infographics && next build",
     "infographics": "node scripts/generate-minimum-wage-infographic.mjs",
     "blog:infographics": "node scripts/generate-blog-infographics.mjs",
     "start": "next start",

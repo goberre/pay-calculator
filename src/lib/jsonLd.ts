@@ -1,4 +1,5 @@
 import { faqItems, seoConfig } from "@/config/seo";
+import { brandUrls } from "@/config/brand";
 import { siteConfig } from "@/config/site";
 
 type JsonLdOptions = {
@@ -18,7 +19,13 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
     {
       "@type": "ListItem" as const,
       position: 1,
-      name: "홈",
+      name: brandUrls.brandName,
+      item: brandUrls.hub,
+    },
+    {
+      "@type": "ListItem" as const,
+      position: 2,
+      name: "시급·연봉",
       item: url,
     },
   ];
@@ -26,7 +33,7 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
   if (options.path && options.breadcrumbName) {
     breadcrumbItems.push({
       "@type": "ListItem" as const,
-      position: 2,
+      position: 3,
       name: options.breadcrumbName,
       item: pageUrl,
     });
@@ -34,12 +41,22 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
 
   const graph: Record<string, unknown>[] = [
     {
+      "@type": "Organization",
+      "@id": `${brandUrls.hub}/#organization`,
+      name: brandUrls.brandName,
+      url: brandUrls.hub,
+      logo: `${brandUrls.hub}/favicon.svg`,
+      sameAs: [brandUrls.hub, brandUrls.tax, brandUrls.pay],
+    },
+    {
       "@type": "WebSite",
       "@id": `${url}/#website`,
       url,
       name: seoConfig.siteName,
       description: seoConfig.description,
       inLanguage: "ko-KR",
+      publisher: { "@id": `${brandUrls.hub}/#organization` },
+      isPartOf: { "@id": `${brandUrls.hub}/#website` },
     },
     {
       "@type": "WebApplication",
@@ -49,6 +66,8 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
       description: pageDescription,
       applicationCategory: "FinanceApplication",
       operatingSystem: "Any",
+      provider: { "@id": `${brandUrls.hub}/#organization` },
+      isPartOf: { "@id": `${url}/#website` },
       offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
       inLanguage: "ko-KR",
     },
@@ -59,7 +78,7 @@ export function buildJsonLdGraph(options: JsonLdOptions = {}) {
   ];
 
   if (!options.path) {
-    graph.splice(2, 0, {
+    graph.splice(3, 0, {
       "@type": "FAQPage",
       "@id": `${url}/#faq`,
       mainEntity: faqItems.map((item) => ({
